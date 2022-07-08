@@ -4,9 +4,9 @@ task:
     container:
        cpu: 4  
        memory: 16G # So that we can have ram when needed, 32G highest
-    download_ccache_background_script: # To download ccache in background
+    gradlew build: # To download ccache in background
       - ./gradlew --no-daemon build # Ccache download script
-    sync_script: # To sync source
+    ls: # To sync source
       - ls build/kotlin # Source sync script
  #   monitor_background_script: # To monitor ccache and machine status every minute, runs in background
   #    - ./monitor # Monitor script
