@@ -11,3 +11,6 @@ jobs:
         env:
           TERM: dumb
           JAVA_OPTS: -Xmx2048m
+
+      - run: ls build 
+      
