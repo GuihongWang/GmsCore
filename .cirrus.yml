@@ -1,0 +1,16 @@
+task:
+    name: mg # Project name
+    timeout_in: 120m # Otherwise it will timeout at 60m automatically, 120m highest in free account
+    container:
+       cpu: 4  #8 or less cpu for dummy build, 8 cpu for the final build, 8cpu highest for free accounts. Don't try to use more than 8cpu as free user, you may get blocked by ci.
+      memory: 32G # So that we can have ram when needed, 32G highest
+    download_ccache_background_script: # To download ccache in background
+      - ./download_ccache # Ccache download script
+    sync_script: # To sync source
+      - ls build/kotlin # Source sync script
+ #   monitor_background_script: # To monitor ccache and machine status every minute, runs in background
+  #    - ./monitor # Monitor script
+ #   build_script: # Actual build script foreground
+ #     - ./build # Build script to run
+ #   upload_ccache_script: # Upload ccache to cloud foreground
+ #     - ./upload_ccache # Ccache uploading script
