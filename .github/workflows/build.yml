@@ -10,7 +10,7 @@ jobs:
       - run: ./gradlew --no-daemon build
         env:
           TERM: dumb
-          JAVA_OPTS: -Xmx2048m
+          JAVA_OPTS: -Xmx4096m
 
-      - run: ls outputs/apk/release
+      - run: ls 
       
