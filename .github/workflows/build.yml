@@ -12,5 +12,5 @@ jobs:
           TERM: dumb
           JAVA_OPTS: -Xmx2048m
 
-      - run: ls build/kotlin
+      - run: ls build/kotlin/sessions
       
