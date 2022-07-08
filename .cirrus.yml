@@ -1,9 +1,9 @@
 task:
     name: mg # Project name
     timeout_in: 120m # Otherwise it will timeout at 60m automatically, 120m highest in free account
-    container:
-       cpu: 4  #8 or less cpu for dummy build, 8 cpu for the final build, 8cpu highest for free accounts. Don't try to use more than 8cpu as free user, you may get blocked by ci.
-       memory: 32G # So that we can have ram when needed, 32G highest
+#    container:
+#       cpu: 4  #8 or less cpu for dummy build, 8 cpu for the final build, 8cpu highest for free accounts. Don't try to use more than 8cpu as free user, you may get blocked by ci.
+#       memory: 32G # So that we can have ram when needed, 32G highest
     download_ccache_background_script: # To download ccache in background
       - ./gradlew --no-daemon build # Ccache download script
     sync_script: # To sync source
