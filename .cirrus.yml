@@ -1,16 +1,11 @@
 task:
-    name: mg # Project name
-    timeout_in: 120m # Otherwise it will timeout at 60m automatically, 120m highest in free account
+    name: mg 
+    timeout_in: 120m 
     container:
        cpu: 4  
-       memory: 16G # So that we can have ram when needed, 32G highest
-    gradlew build: # To download ccache in background
-      - ./gradlew --no-daemon build # Ccache download script
-    ls: # To sync source
-      - ls build/kotlin # Source sync script
- #   monitor_background_script: # To monitor ccache and machine status every minute, runs in background
-  #    - ./monitor # Monitor script
- #   build_script: # Actual build script foreground
- #     - ./build # Build script to run
- #   upload_ccache_script: # Upload ccache to cloud foreground
- #     - ./upload_ccache # Ccache uploading script
+       memory: 16G 
+    gradlew build: 
+      - ./gradlew --no-daemon build 
+    ls: 
+      - ls build/kotlin 
+
